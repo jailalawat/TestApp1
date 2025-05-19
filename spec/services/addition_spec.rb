@@ -27,5 +27,9 @@ RSpec.describe 'Addition' do
     it 'will return sum of the any number of string integer pass as comma seprated' do
       expect(object.add('1,2,3,4,5')).to eq(15)
     end
+
+    it 'allow the add method to handle new lines between numbers (instead of commas) ("1\n2,3" should return 6)' do
+      expect(object.add('1\n2,3')).to eq(6)
+    end
   end
 end

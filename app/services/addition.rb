@@ -11,6 +11,6 @@ class Addition
 	end
 
 	def loop_and_sum str
-		str.split(',').map(&:to_i).inject(&:+)
+		str.gsub('\n', ',').split(',').map(&:to_i).inject(&:+)
 	end
 end
