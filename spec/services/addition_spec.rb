@@ -23,5 +23,9 @@ RSpec.describe 'Addition' do
     it 'will return sum of the string integer pass as comma seprated' do
       expect(object.add('1,2')).to eq(3)
     end
+
+    it 'will return sum of the any number of string integer pass as comma seprated' do
+      expect(object.add('1,2,3,4,5')).to eq(15)
+    end
   end
 end
