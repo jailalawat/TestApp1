@@ -6,7 +6,11 @@ class Addition
 		when 1
 			numbers.to_i
 		when 3
-			numbers.split(',').map(&:to_i).inject(&:+)
+			loop_and_sum(numbers)
 		end
+	end
+
+	def loop_and_sum str
+		str.split(',').map(&:to_i).inject(&:+)
 	end
 end

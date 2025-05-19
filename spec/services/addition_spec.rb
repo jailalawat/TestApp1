@@ -1,7 +1,14 @@
 
 require "/Users/jailalawat/projects/TestApp/app/services/addition.rb"
 
-RSpec.describe 'Addition' do           #
+RSpec.describe 'Addition' do 
+
+  context 'loop and add the string comma seprated integer' do
+    it 'will loop and return sum of string' do
+      expect(Addition.new.loop_and_sum('1,2,3,4,5')).to eq(15)
+    end
+  end
+          #
   context 'Call the Add method' do
     let(:object) { Addition.new }
 
